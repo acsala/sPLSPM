@@ -436,8 +436,8 @@ splspm <- function(Data,
                                            max_iterations = maxiter,
                                            nr_subsets = nr_subsets,
                                            parallel_cv = parallel_cv)
-    lambda = cv_results$best_ridge
-    nonzero = cv_results$best_nonzero
+    lambda = unlist(cv_results$best_ridge)
+    nonzero = unlist(cv_results$best_nonzero)
 
     print("CV finished")
 
