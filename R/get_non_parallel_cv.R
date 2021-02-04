@@ -260,7 +260,7 @@ get_non_parallel_cv <- function(X,
 
   for (i in 1:length(labels_lambdas)){
 
-    sub_result    <-  (c(labels_lambdas[i], labels_non_zeros[i], mean(abs_cors[,i], na.rm = TRUE)))
+    sub_result    <-  (c(labels_lambdas[i], labels_non_zeros[i], mean(unlist(abs_cors[,i]), na.rm = TRUE)))
     mean_abs_cors <- rbind(mean_abs_cors, sub_result)
 
   }
