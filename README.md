@@ -55,6 +55,7 @@ time_data <- system.time(
                      scaled=T, penalization = "enet", nonzero = c(40,20),
                      cross_validate = T, lambda = 1, maxiter = 100)
 )
+
 s_satpls$outer_model
 s_satpls$model$iter
 s_satpls$nonzero
